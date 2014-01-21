@@ -21,6 +21,14 @@ $(function() {
 				$(".button").removeAttr("disabled","disabled");
 			}
 		});
+
+
+	$("textarea").blur(function() {
+		$(this).removeClass('expand');
+		$("#tweet-controls").hide();
+	})
+
+
 	});// end textarea click
 
 
@@ -29,7 +37,7 @@ $(function() {
 	
 
 
-	$("#tweet-submit").click(function(){
+	$("#tweet-submit").mousedown(function(){
 		var tweetWords = $(".tweet-compose").val(),
 			newTweet   = $('.tweet').clone().eq(0),
 			oneName    = $("#realName").text(),
@@ -45,15 +53,19 @@ $(function() {
 
 				$("#stream").prepend(newTweet);
 
+				$("textarea").val("");
+
 	 });  //end click tweet
   				
 
-	$(".tweet").click(function(){
-		$(".stats").animate({
+	$("body").on('click', ".tweet", function(){
+		$(this).find('.stats').animate({
 				height:"toggle"},500);
-		$(".reply").animate({
-				height:"toggle"},500);
+	})
 
+		$("body").on('click', ".tweet", function(){
+		$(this).find('.reply').animate({
+				height:"toggle"},500);
 	});
 
   

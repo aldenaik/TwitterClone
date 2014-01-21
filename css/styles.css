@@ -17,6 +17,14 @@ body {
 	background-repeat: no-repeat;
 	background-color: #1A1B1F;
 	font-family: "Helvetica Neue",Arial,sans-serif;
+	height:100%;
+}
+#grey {
+	background-color: #595959;
+	width:68%;
+	height:100%;
+	float:left;
+	margin-left: 15%
 }
 
 /* GLOBAL ELEMENTS */
@@ -68,15 +76,20 @@ body {
 
 /* PAGE STRUCTURE */
 #page-container {
-	padding: 54px 14px 15px;
-	margin: 0 auto;
-	width: 837px;
+	height:41px;
+	margin-bottom: 15px;
+	/*margin: 0 auto;*/
+	width: 200%;
+	background-color:#242424;
+	display:inline-block;
 }
 #main {
 	float: right;
 	width: 522px;
 	background-color: white;
 	border-radius: 6px;
+	margin-right:15px;
+	margin-bottom: 15px;
 }
 	#main h2 {
 		font-size: 18px;
@@ -84,12 +97,15 @@ body {
 		border-bottom: 1px solid #e8e8e8;
 	}
 
+
 /* DASHBOARD */
 #dashboard {
 	border-radius: 6px;
 	background-color: white;
 	float: left;
 	width: 302px;
+	margin-top: 56px;
+	margin-left: 16px;
 }
 	/* Profile */
 	#profile-summary, #tweet-content {
@@ -276,7 +292,7 @@ body {
 			}
 
 .expand {
-	height:100px;
+	height:70px;
 
 }
 
